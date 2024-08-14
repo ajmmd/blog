@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.tedu.tmall.passport.dao.persist.mapper.UserMapper">
+
+    <!-- UserLoginInfoVO getLoginInfoByUsername(String username); -->
+    <select id="getLoginInfoByUsername"
+            resultMap="LoginInfoResultMap">
+        SELECT
+            account_user.id,
+            account_user.username,
+            account_user.password,
+            account_user.avatar,
+            account_user.enable,
+            account_permission.value
+        FROM account_user
+        LEFT JOIN account_user_role ON account_user.id = account_user_role.user_id
+        LEFT JOIN account_role_permission ON account_user_role.role_id = account_role_permission.role_id
+        LEFT JOIN account_permission ON account_role_permission.permission_id = account_permission.id
+        WHERE username = #{username}
+    </select>
+
+    <resultMap id="LoginInfoResultMap" type="cn.tedu.tmall.passport.pojo.vo.UserLoginInfoVO">
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
+        <result column="avatar" property="avatar"/>
+        <result column="enable" property="enable"/>
+        <collection property="authorities" ofType="java.lang.String">
+            <constructor>
+                <arg column="value"/>
+            </constructor>
+        </collection>
+    </resultMap>
+
+</mapper>
