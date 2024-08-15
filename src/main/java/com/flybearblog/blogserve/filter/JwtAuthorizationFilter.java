@@ -40,7 +40,7 @@ import java.util.List;
 @Component
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
-    @Value("${tmall.jwt.secret-key}")
+    @Value("${blog.jwt.secret-key}")
     private String secretKey;
     @Autowired
     private IUserCacheRepository userCacheRepository;

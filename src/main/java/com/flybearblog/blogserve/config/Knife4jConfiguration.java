@@ -28,23 +28,23 @@ public class Knife4jConfiguration {
     /**
      * 【重要】指定Controller包路径
      */
-    private static final String BASE_PACKAGE = "cn.tedu.tmall";
+    private static final String BASE_PACKAGE = "com/flybearblog/blogserve";
     /**
      * 组名
      */
-    private static final String GROUP_NAME = "学茶商城";
+    private static final String GROUP_NAME = "飞熊博客";
     /**
      * 主机名
      */
-    private static final String HOST = "http://java.tedu.cn";
+    private static final String HOST = "http://www.flybearblog.com";
     /**
      * 标题
      */
-    private static final String TITLE = "学茶商城-单点登录服务-在线API文档";
+    private static final String TITLE = "飞熊博客-在线API文档";
     /**
      * 简介
      */
-    private static final String DESCRIPTION = "学茶商城-单点登录服务-在线API文档";
+    private static final String DESCRIPTION = "飞熊博客-在线API文档";
     /**
      * 服务条款URL
      */
@@ -52,19 +52,19 @@ public class Knife4jConfiguration {
     /**
      * 联系人
      */
-    private static final String CONTACT_NAME = "Java教学研发部";
+    private static final String CONTACT_NAME = "熊飞";
     /**
      * 联系网址
      */
-    private static final String CONTACT_URL = "http://java.tedu.cn";
+    private static final String CONTACT_URL = "http://www.flybearblog.com";
     /**
      * 联系邮箱
      */
-    private static final String CONTACT_EMAIL = "java@tedu.cn";
+    private static final String CONTACT_EMAIL = "1504812780@qq.com";
     /**
      * 版本号
      */
-    private static final String VERSION = "2.0";
+    private static final String VERSION = "1.0";
 
     @Autowired
     private OpenApiExtensionResolver openApiExtensionResolver;

@@ -4,6 +4,6 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan("cn.tedu.tmall.passport.dao.persist.mapper")
+@MapperScan("com.flybearblog.blogserve.dao.persist.mapper")
 public class MyBatisConfiguration {
 }
